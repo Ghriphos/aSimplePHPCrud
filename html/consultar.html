@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Dados - Gerenciamento de Biblioteca</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/favicon.ico" rel="icon" type="image/x-icon" />
+    <script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body class="corFundo">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gerenciamento de Biblioteca</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="alterar.html">Alterar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="inserir.html">Inserir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="deletar.html">Deletar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="consultar.html">Consultar</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <button type="submit" class="btn btn-primary" name="acao" value="alterarNomeAutorCodigo"><a class="nav-link fonte" href="index.html">Log Out</a></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <form action="php/mainConsultar.php">
+        <div class="container">
+            <br><br>
+            <h1 class="text-center fonte">O que deseja consultar do sistema?</h1>
+            <br>
+            <h2 class="text-center fonte">Consultar nas Tabelas</h2>
+            <br>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mb-3">
+                        <h4 class="fonte">Consultar tudo na tabela livro</h4> 
+                        <br><button type="submit" class="btn btn-primary fonte" name="acao" value="consultarTudoLivro">Consultar</button>
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar livro pelo código</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Código do Livro</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Código desejado" name="codLivroConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o código que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarLivroCodigo">Consultar</button>
+                        
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar livro pelo nome</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Nome do Livro</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Código desejado" name="nomeLivroConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o nome que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarLivroNome">Consultar</button>
+                        
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="mb-3">
+                        <h4 class="fonte">Consultar tudo na tabela Autor</h4> 
+                        <br><button type="submit" class="btn btn-primary" name="acao" value="consultarTudoAutor">Consultar</button>
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar autor pelo código</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Código do Autor</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Código desejado" name="codAutorConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o código que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarAutorCodigo">Consultar</button>
+                        
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar autor pelo nome</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Nome do Autor</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Nome desejado" name="nomeAutorConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o nome que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarAutorNome">Consultar</button>
+                        
+                    </div>
+                    
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="mb-3">
+                        <h4 class="fonte">Consultar tudo na tabela Biblioteca</h4>
+                        <br><button type="submit" class="btn btn-primary" name="acao" value="consultarTudoBiblioteca">Consultar</button>
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar biblioteca pelo código</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Código da biblioteca</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Código desejado" name="codBibliotecaConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o código que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarBibliotecaCodigo">Consultar</button>
+                    </div>
+                    <div class="mb-3">
+                      <h4 class="fonte">Consultar biblioteca pelo nome</h4>
+                        <label for="exampleInputPassword1" class="form-label fonte">Nome da biblioteca</label>
+                        <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Nome desejado" name="nomeBibliotecaConsultar">
+                        <div id="emailHelp" class="form-text instrucao">Coloque aqui o nome que deseja consultar</div>
+                        <br>
+                        <button type="submit" class="btn btn-primary" name="acao" value="consultarBibliotecaNome">Consultar</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                      <h4 class="fonte">Consultar tudo na tabela usuarios</h4> 
+                      <br><button type="submit" class="btn btn-primary fonte" name="acao" value="consultarTudoUsuario">Consultar</button>
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label fonte">Login do Usuário</label>
+                      <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Login desejado" name="loginUsuarioConsultar">
+                      <div id="emailHelp" class="form-text instrucao">Coloque aqui o login que deseja consultar</div>
+                      
+                  </div>
+                  <button type="submit" class="btn btn-primary" name="acao" value="consultarUsuarioLogin">Consultar</button>
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                    <h4 class="fonte">Consultar tudo na tabela Exemplar</h4> 
+                    <br><button type="submit" class="btn btn-primary" name="acao" value="consultarTudoExemplar">Consultar</button>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label fonte">Código do Exemplar</label>
+                    <input type="text" class="form-control corFundo fonte" id="exampleInputPassword1" placeholder="Código desejado" name="codExemplarConsultar">
+                    <div id="emailHelp" class="form-text">Coloque aqui o código que deseja consultar</div>
+                    
+                </div>
+                <button type="submit" class="btn btn-primary" name="acao" value="consultarExemplarCodigo">Consultar</button>
+             </div>
+             
+              
+            </div>
+            <br>
+        </div>
+    </form>
