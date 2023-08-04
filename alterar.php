@@ -49,7 +49,7 @@
           </center>
       <form action="php/controlAlterar.php" method="post">
       
-        <div class="container">
+        <div class="containerr">
         
 
           <!-- Tabela Autor -->
